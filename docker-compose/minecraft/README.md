@@ -13,7 +13,7 @@ mkdir -p /opt/minecraft
 chown 999:993 -R /opt/minecraft
 ```
 ## im /opt/minecraft Verzeichnis braucht es ein paar Einstellungen
-### whitelist.json (sicherstellen das nur erlaubte User einloggen können
+### whitelist.json (sicherstellen das nur erlaubte User einloggen können)
 ```
 [
   {
