@@ -3,6 +3,7 @@
 zum aktualisiern in das Verzeichnis mit der docker-compose.yaml gehn
 ```
 sudo docker-compose stop
+sudo docker-compose pull
 sudo docker-compose up -d
 ```
 ## damit es geht braucht man einen factorio user der auch Zugriff auf das Verzeichnis /opt/factorio hat 
