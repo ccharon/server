@@ -1,0 +1,32 @@
+version: "2.1"
+services:
+  minecraft-java-survival:
+    image: itzg/minecraft-server:latest
+    container_name: minecraft-java-survival
+    environment:
+      - EULA=true
+      - MODE=survival
+      - UID=999
+      - GID=993
+      - MEMORY=2G
+      - DIFFICULTY=normal
+      - SERVER_NAME=I will survive
+      - TYPE=VANILLA
+      - VERSION=LATEST
+      - FORGEVERSION=RECOMMENDED
+      - SPONGEBRANCH=STABLE
+      - FABRICVERSION=LATEST
+      - LEVEL=world
+      - PVP=true
+      - ENABLE_RCON=false
+      - RCON_PORT=25575
+      - RCON_PASSWORD=minecraft
+      - LEVEL_TYPE=DEFAULT
+      - SERVER_PORT=25565
+      - ONLINE_MODE=true
+    volumes:
+      - /opt/minecraft:/data
+    ports:
+      - 25565:25565
+    restart: unless-stopped
+    
