@@ -1,0 +1,13 @@
+version: '2.1'
+services:
+  factorio:
+    image: factoriotools/factorio:latest
+    container_name: factorio
+    environment:
+     - LOAD_LATEST_SAVE=false
+     - SAVE_NAME=savgame
+    ports:
+     - "34197:34197/udp"
+    volumes:
+     - /opt/factorio:/factorio
+    restart: unless-stopped
