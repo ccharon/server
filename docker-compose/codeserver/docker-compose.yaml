@@ -1,0 +1,16 @@
+version: "2.1"
+services:
+  code-server:
+    image: charon/code-server:latest
+    build: /home/christian/docker/codeserver
+    container_name: code-server
+    environment:
+      - PUID=994
+      - PGID=992
+      - TZ=Europe/Berlin
+      - PASSWORD=passwort :) also das ist nicht das echte .. nur für den Fall
+    volumes:
+      - /opt/coder/config:/config
+    ports:
+      - 127.0.0.1:8443:8443
+    restart: unless-stopped
