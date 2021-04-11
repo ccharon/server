@@ -1,0 +1,26 @@
+version: '3'
+services:
+  minecraft:
+    image: itzg/minecraft-bedrock-server:latest
+    container_name: minecraft-bedrock-survival
+    restart: unless-stopped
+    ports:
+      - 19132:19132/udp
+    volumes:
+      - /opt/minecraft-bedrock:/data
+    environment:
+      UID: 999
+      GID: 993
+      MEMORY: 2G
+      TZ: "Europe/Berlin"
+      EULA: "TRUE"
+      SERVER_NAME: "nukulartechniker.de"
+      SERVER_PORT: "19132"
+      GAMEMODE: "survival"
+      DIFFICULTY: "peaceful"
+      MAX_PLAYERS: "20"
+      ONLINE_MODE: "true"
+      WHITE_LIST: "true"
+      DEFAULT_PLAYER_PERMISSION_LEVEL: "member"
+    stdin_open: true
+    tty: true
